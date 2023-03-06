@@ -1,0 +1,50 @@
+// Colors
+// ---------------------------------
+
+$transparent:                       rgba(255, 255, 255, 0);
+
+$text-main:                         #000000;
+$text-secondary:                    #6B6B6B;
+$text-addition:                     #A6A4A0;
+$text-disable:                      #C3C2BE;
+
+$bg-main:                           #FFFFFF;
+$bg-secondary:                      #F7F7F5;
+$bg-secondary-accent:               #EDECEA;
+
+$stroke-main:                       #E4E4E4;
+$stroke-secondary:                  #C3C2BE;
+$stroke-accent:                     #000000;
+
+$accent-brand:                      #3D3BFF;
+$accent-sale:                       #FFF705;
+$accent-danger:                     #FF5733;
+$accent-danger-bg:                  #FFCDC2;
+$accent-always-white:               #FFFFFF;
+$accent-always-black:               #000000;
+
+$variable:                          #DCF4FE;
+
+// Typography
+// ---------------------------------
+
+$ff-Graphik:                        "GraphikLCTT", "Arial", sans-serif;
+
+// Animation
+// ---------------------------------
+
+$tf-default:                        ease;
+$trans-default:                     0.3s $tf-default;
+
+
+// Viewports
+// ---------------------------------
+
+$vp-320:                            320px;
+$vp-360:                            360px;
+$vp-768:                            768px;
+$vp-1024:                           1024px;
+$vp-1280:                           1280px;
+
+
+

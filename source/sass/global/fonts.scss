@@ -1,0 +1,55 @@
+// @font-face {
+//   font-style: normal;
+//   font-weight: 400;
+//   font-family: "Rouble";
+
+//   font-display: swap;
+//   src:
+//     url("../fonts/rouble.woff2") format("woff2"),
+//     url("../fonts/rouble.woff") format("woff");
+// }
+
+@font-face {
+  font-style: normal;
+  font-weight: 400;
+  font-family: "GraphikLCTT";
+
+  font-display: swap;
+  src:
+    url("../fonts/GraphikLCTT-VA-Regular.woff2") format("woff2"),
+    url("../fonts/GraphikLCTT-VA-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 500;
+  font-family: "GraphikLCTT";
+
+  font-display: swap;
+  src:
+    url("../fonts/GraphikLCTT-VA-Medium.woff2") format("woff2"),
+    url("../fonts/GraphikLCTT-VA-Medium.woff") format("woff");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 600;
+  font-family: "GraphikLCTT";
+
+  font-display: swap;
+  src:
+    url("../fonts/GraphikLCTT-VA-Semibold.woff2") format("woff2"),
+    url("../fonts/GraphikLCTT-VA-Semibold.woff") format("woff");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 700;
+  font-family: "GraphikLCTT";
+
+  font-display: swap;
+  src:
+    url("../fonts/GraphikLCTT-VA-Bold.woff2") format("woff2"),
+    url("../fonts/GraphikLCTT-VA-Bold.woff") format("woff");
+}
+
