@@ -1,20 +1,22 @@
 mixin booking()
   section.booking.container
-    h1.booking__title
-      |Заполните форму, <br>
-      |чтобы оформить заказ
+    .booking__lead
+      h1.booking__title
+        |Заполните форму, <br>
+        |чтобы оформить заказ
 
-    p Забронируйте курсы со скидкой, а мы перезвоним, проконсультируем и оформим заказ.
+      p.booking__description Забронируйте курсы со скидкой, а мы перезвоним, проконсультируем и&nbsp;оформим заказ.
+    .booking__prices
+      h2.booking__title.title Итоговая стоимость
+      .booking__wrapper
+        .booking__text
+          p.booking__old-price
+            span.booking__crossed 000 000
+            |  ₽
+          p.booking__hire-purchase
+            span.booking__price 0 000
+            span.booking__month  ₽/мес.
+          p.booking__count Рассрочка на NN месяцев
 
-    h2.booking__title Итоговая стоимость
-    .booking__wrapper
-      p
-        span.booking__crossed 000 000
-        |₽
-      p
-        span.booking__price 0 000
-        |₽/мес.
-      p Рассрочка на NN месяцев
-
-      .booking__discount
-        span –00%
+        .booking__discount
+          span –00%

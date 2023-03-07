@@ -11,59 +11,61 @@
     <link rel="preload" href="fonts/GraphikLCTT-VA-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   </head>
   <body>
-    <style>
-      .container {
-        padding-top: 50px;
-        padding-bottom: 50px;
-      }
-      
-      h1 {
-        font-size: 24px;
-        line-height: 28px;
-      }
-      
-      a {
-        color: rgb(10, 10, 175);
-      }
-      
-      li {
-        font-size: 18px;
-        line-height: 22px;
-        margin-bottom: 7px;
-      }
-      
-      img {
-        width: 100%;
-        max-width: 300px;
-        height: auto;
-        display: block;
-        margin-bottom: 40px;
-      }
-      
-      @media (max-width: 768px) {
+    <div class="wrapper wrapper--sitemap">
+      <style>
         .container {
-          padding-top: 20px;
-          padding-bottom: 20px;
+          padding-top: 50px;
+          padding-bottom: 50px;
         }
-      
-        ol {
-          padding-left: 20px;
+        
+        h1 {
+          font-size: 24px;
+          line-height: 28px;
         }
-      
-        ol li {
-          margin-bottom: 15px;
+        
+        a {
+          color: rgb(10, 10, 175);
         }
-      }
-      
-    </style>
-    <main>
-      <div class="container">
-        <h1>Список страниц</h1>
-        <ol>
-          <li><a href="index.html">Главная — index.html</a></li>
-        </ol>
-      </div>
-    </main>
+        
+        li {
+          font-size: 18px;
+          line-height: 22px;
+          margin-bottom: 7px;
+        }
+        
+        img {
+          width: 100%;
+          max-width: 300px;
+          height: auto;
+          display: block;
+          margin-bottom: 40px;
+        }
+        
+        @media (max-width: 768px) {
+          .container {
+            padding-top: 20px;
+            padding-bottom: 20px;
+          }
+        
+          ol {
+            padding-left: 20px;
+          }
+        
+          ol li {
+            margin-bottom: 15px;
+          }
+        }
+        
+      </style>
+      <main>
+        <div class="container">
+          <h1>Список страниц</h1>
+          <ol>
+            <li><a href="index.html">Главная — index.html</a></li>
+          </ol>
+        </div>
+      </main>
+    </div>
     <script src="js/main.min.js"></script>
   </body>
 </html>
