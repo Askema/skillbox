@@ -14,15 +14,27 @@ mixin payment()
           span
             |Оплатить всю сумму<br>
             |со скидкой 7000 ₽
+          .payment__svg-wrapper
+            svg(width="25" height="16" aria-hidden="true").payment__svg.payment__svg--visa
+              use(xlink:href="img/sprite_auto.svg#visa")
+            svg(width="29" height="16" aria-hidden="true").payment__svg.payment__svg--mir
+              use(xlink:href="img/sprite_auto.svg#mir")
+            svg(width="14" height="16" aria-hidden="true").payment__svg.payment__svg--mc
+              use(xlink:href="img/sprite_auto.svg#mc")
       .payment__item
         input(type="radio" name="payment" value="sberbank" id="sberbank").payment__input
         label(for="sberbank").payment__label
           span
             |В рассрочку в Покупай<br>
             |со Сбером
+          picture
+            source(type="image/webp", srcset="img/sber.webp, img/sber@2x.webp 2x")
+            img(src="img/sber.png", srcset= "img/sber@2x.png 2x", width="19", height="16", alt="Сбербанк").payment__img
       .payment__item
         input(type="radio" name="payment" value="tinkoff" id="tinkoff").payment__input
         label(for="tinkoff").payment__label
           span
             |В рассрочку<br>
             |в Тинькофф
+          svg(width="61" height="16" aria-hidden="true").payment__svg.payment__svg--tinkoff
+            use(xlink:href="img/sprite_auto.svg#tinkoff")
