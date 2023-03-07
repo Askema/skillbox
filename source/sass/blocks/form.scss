@@ -12,6 +12,7 @@
   color: $text-main;
   padding: 18px;
   width: 100%;
+  transition: $trans-default;
 
   &::placeholder {
     color: $text-main;
@@ -32,7 +33,7 @@
     }
   }
 
-  &:not(:placeholder-shown) + label {
+  &:not(:placeholder-shown) ~ label {
     top: 9px;
     @include text(11px, 12px);
     color: $text-secondary;
@@ -48,6 +49,7 @@
   position: absolute;
   left: 19px;
   top: 16px;
+  transition: $trans-default;
 }
 
 .form__agree {
@@ -60,4 +62,11 @@
     color: $text-secondary;
     text-decoration: underline;
   }
+}
+
+.form__invalid {
+  color: $accent-danger;
+  @include text(11px, 12px, 400);
+  position: absolute;
+  bottom: -13px;
 }
