@@ -1,23 +1,28 @@
 mixin payment()
   .payment
-    h2.payment__title.form__title Выберите вариант оплаты
-    input(type="radio" name="payment" value="consultation" id="consultation" checked)
-    label(for="consultation")
-      span
-        |Оставить заявку <br>
-        |на консультацию
-    input(type="radio" name="payment" value="hire-purchase" id="hire-purchase")
-    label(for="hire-purchase")
-      span
-        |Оплатить всю сумму<br>
-        |со скидкой 7000 ₽
-    input(type="radio" name="payment" value="sberbank" id="sberbank")
-    label(for="sberbank")
-      span
-        |В рассрочку в Покупай<br>
-        |со Сбером
-    input(type="radio" name="payment" value="tinkoff" id="tinkoff")
-    label(for="tinkoff")
-      span
-        |В рассрочку<br>
-        |в Тинькофф
+    h2.payment__title.title Выберите вариант оплаты
+    .payment__wrapper
+      .payment__item
+        input(type="radio" name="payment" value="consultation" id="consultation" checked).payment__input
+        label(for="consultation").payment__label
+          span
+            |Оставить заявку <br>
+            |на консультацию
+      .payment__item
+        input(type="radio" name="payment" value="hire-purchase" id="hire-purchase").payment__input
+        label(for="hire-purchase").payment__label
+          span
+            |Оплатить всю сумму<br>
+            |со скидкой 7000 ₽
+      .payment__item
+        input(type="radio" name="payment" value="sberbank" id="sberbank").payment__input
+        label(for="sberbank").payment__label
+          span
+            |В рассрочку в Покупай<br>
+            |со Сбером
+      .payment__item
+        input(type="radio" name="payment" value="tinkoff" id="tinkoff").payment__input
+        label(for="tinkoff").payment__label
+          span
+            |В рассрочку<br>
+            |в Тинькофф

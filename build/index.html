@@ -11,53 +11,78 @@
     <link rel="preload" href="fonts/GraphikLCTT-VA-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   </head>
   <body>
-    <main>
-      <section class="booking container">
-        <h1 class="booking__title">
-          Заполните форму, <br>
-          чтобы оформить заказ
-        </h1>
-        <p>Забронируйте курсы со скидкой, а мы перезвоним, проконсультируем и оформим заказ.</p>
-        <h2 class="booking__title">Итоговая стоимость</h2>
-        <div class="booking__wrapper">
-          <p><span class="booking__crossed">000 000</span>₽</p>
-          <p><span class="booking__price">0 000</span>₽/мес.</p>
-          <p>Рассрочка на NN месяцев</p>
-          <div class="booking__discount"><span>–00%</span></div>
-        </div>
-      </section>
-      <section class="form container">
-        <form action="#" method="post">
-          <div class="payment">
-            <h2 class="payment__title form__title">Выберите вариант оплаты</h2>
-            <input type="radio" name="payment" value="consultation" id="consultation" checked>
-            <label for="consultation"><span>
-                Оставить заявку <br>
-                на консультацию</span></label>
-            <input type="radio" name="payment" value="hire-purchase" id="hire-purchase">
-            <label for="hire-purchase"><span>
-                Оплатить всю сумму<br>
-                со скидкой 7000 ₽</span></label>
-            <input type="radio" name="payment" value="sberbank" id="sberbank">
-            <label for="sberbank"><span>
-                В рассрочку в Покупай<br>
-                со Сбером</span></label>
-            <input type="radio" name="payment" value="tinkoff" id="tinkoff">
-            <label for="tinkoff"><span>
-                В рассрочку<br>
-                в Тинькофф</span></label>
+    <div class="wrapper">
+      <main>
+        <section class="booking container">
+          <div class="booking__lead">
+            <h1 class="booking__title">
+              Заполните форму, <br>
+              чтобы оформить заказ
+            </h1>
+            <p class="booking__description">Забронируйте курсы со скидкой, а мы перезвоним, проконсультируем и&nbsp;оформим заказ.</p>
           </div>
-          <h2>Заполните контактные данные</h2>
-          <input type="text" name="name" id="name" placeholder="Имя" required>
-          <label for="name"></label>
-          <input type="tel" name="tel" id="tel" placeholder="Телефон" pattern="[+]d{1}s[(]d{3}[)]sd{3}[-]d{2}[-]d{2}" minlength="18" maxlength="18" required>
-          <label for="tel"></label>
-          <input type="email" name="email" id="email" placeholder="Электронная почта" required maxlength="20">
-          <label for="email"></label>
-          <button type="submit">Отправить</button><small>Нажимая на кнопку, я соглашаюсь на<a href="#"> обработку персональных данных</a> с<a href="#"> правилами пользования Платформой</a></small>
-        </form>
-      </section>
-    </main>
+          <div class="booking__prices">
+            <h2 class="booking__title title">Итоговая стоимость</h2>
+            <div class="booking__wrapper">
+              <div class="booking__text">
+                <p class="booking__old-price"><span class="booking__crossed">000 000</span> ₽</p>
+                <p class="booking__hire-purchase"><span class="booking__price">0 000</span><span class="booking__month"> ₽/мес.</span></p>
+                <p class="booking__count">Рассрочка на NN месяцев</p>
+              </div>
+              <div class="booking__discount"><span>–00%</span></div>
+            </div>
+          </div>
+        </section>
+        <section class="form container">
+          <form action="#" method="post">
+            <div class="payment">
+              <h2 class="payment__title title">Выберите вариант оплаты</h2>
+              <div class="payment__wrapper">
+                <div class="payment__item">
+                  <input class="payment__input" type="radio" name="payment" value="consultation" id="consultation" checked>
+                  <label class="payment__label" for="consultation"><span>
+                      Оставить заявку <br>
+                      на консультацию</span></label>
+                </div>
+                <div class="payment__item">
+                  <input class="payment__input" type="radio" name="payment" value="hire-purchase" id="hire-purchase">
+                  <label class="payment__label" for="hire-purchase"><span>
+                      Оплатить всю сумму<br>
+                      со скидкой 7000 ₽</span></label>
+                </div>
+                <div class="payment__item">
+                  <input class="payment__input" type="radio" name="payment" value="sberbank" id="sberbank">
+                  <label class="payment__label" for="sberbank"><span>
+                      В рассрочку в Покупай<br>
+                      со Сбером</span></label>
+                </div>
+                <div class="payment__item">
+                  <input class="payment__input" type="radio" name="payment" value="tinkoff" id="tinkoff">
+                  <label class="payment__label" for="tinkoff"><span>
+                      В рассрочку<br>
+                      в Тинькофф</span></label>
+                </div>
+              </div>
+            </div>
+            <h2 class="form__title title">Заполните контактные данные</h2>
+            <div class="form__item">
+              <input class="form__input" type="text" name="name" id="name" placeholder=" " required>
+              <label class="form__label" for="name">Имя</label>
+            </div>
+            <div class="form__item">
+              <input class="form__input" type="tel" name="tel" id="tel" placeholder=" " pattern="[+]d{1}s[(]d{3}[)]sd{3}[-]d{2}[-]d{2}" minlength="18" maxlength="18" required>
+              <label class="form__label" for="tel">Телефон</label>
+            </div>
+            <div class="form__item">
+              <input class="form__input" type="email" name="email" placeholder=" " id="email" required maxlength="20">
+              <label class="form__label" for="email">Электронная почта</label>
+            </div>
+            <button class="btn" type="submit">Отправить</button>
+            <p class="form__agree">Нажимая на кнопку, я соглашаюсь на<a href="#"> обработку персональных данных</a> с<a href="#"> правилами пользования Платформой</a></p>
+          </form>
+        </section>
+      </main>
+    </div>
     <script src="js/main.min.js"></script>
   </body>
 </html>
