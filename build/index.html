@@ -29,7 +29,11 @@
                 <p class="booking__hire-purchase"><span class="booking__price">0 000</span><span class="booking__month"> ₽/мес.</span></p>
                 <p class="booking__count">Рассрочка на NN месяцев</p>
               </div>
-              <div class="booking__discount"><span>–00%</span></div>
+              <div class="booking__discount">
+                <svg class="booking__svg" width="48" height="48" aria-hidden="true">
+                  <use xlink:href="img/sprite_auto.svg#star"></use>
+                </svg><span>–00%</span>
+              </div>
             </div>
           </div>
         </section>
@@ -48,19 +52,39 @@
                   <input class="payment__input" type="radio" name="payment" value="hire-purchase" id="hire-purchase">
                   <label class="payment__label" for="hire-purchase"><span>
                       Оплатить всю сумму<br>
-                      со скидкой 7000 ₽</span></label>
+                      со скидкой 7000 ₽</span>
+                    <div class="payment__svg-wrapper">
+                      <svg class="payment__svg payment__svg--visa" width="25" height="16" aria-hidden="true">
+                        <use xlink:href="img/sprite_auto.svg#visa"></use>
+                      </svg>
+                      <svg class="payment__svg payment__svg--mir" width="29" height="16" aria-hidden="true">
+                        <use xlink:href="img/sprite_auto.svg#mir"></use>
+                      </svg>
+                      <svg class="payment__svg payment__svg--mc" width="14" height="16" aria-hidden="true">
+                        <use xlink:href="img/sprite_auto.svg#mc"></use>
+                      </svg>
+                    </div>
+                  </label>
                 </div>
                 <div class="payment__item">
                   <input class="payment__input" type="radio" name="payment" value="sberbank" id="sberbank">
                   <label class="payment__label" for="sberbank"><span>
                       В рассрочку в Покупай<br>
-                      со Сбером</span></label>
+                      со Сбером</span>
+                    <picture>
+                      <source type="image/webp" srcset="img/sber.webp, img/sber@2x.webp 2x"><img class="payment__img" src="img/sber.png" srcset="img/sber@2x.png 2x" width="19" height="16" alt="Сбербанк">
+                    </picture>
+                  </label>
                 </div>
                 <div class="payment__item">
                   <input class="payment__input" type="radio" name="payment" value="tinkoff" id="tinkoff">
                   <label class="payment__label" for="tinkoff"><span>
                       В рассрочку<br>
-                      в Тинькофф</span></label>
+                      в Тинькофф</span>
+                    <svg class="payment__svg payment__svg--tinkoff" width="61" height="16" aria-hidden="true">
+                      <use xlink:href="img/sprite_auto.svg#tinkoff"></use>
+                    </svg>
+                  </label>
                 </div>
               </div>
             </div>

@@ -19,4 +19,6 @@ mixin booking()
           p.booking__count Рассрочка на NN месяцев
 
         .booking__discount
+          svg(width="48" height="48" aria-hidden="true").booking__svg
+              use(xlink:href="img/sprite_auto.svg#star")
           span –00%

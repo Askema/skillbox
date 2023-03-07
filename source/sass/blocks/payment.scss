@@ -13,7 +13,9 @@
   @include text(12px, 16px);
   outline: 1px solid $stroke-main;
   padding: 12px;
-  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   min-width: 138px;
   min-height: 100px;
   border-radius: 12px;
@@ -39,4 +41,8 @@
     outline: 2px solid $accent-brand;
     transition: none;
   }
+}
+
+.payment__svg-wrapper {
+  margin-top: auto;
 }
