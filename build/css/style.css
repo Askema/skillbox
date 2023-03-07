@@ -758,6 +758,9 @@ button,
   color: #000000;
   padding: 18px;
   width: 100%;
+  -webkit-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  transition: 0.3s ease;
 }
 
 .form__input::-webkit-input-placeholder {
@@ -811,7 +814,7 @@ button,
   color: #6B6B6B;
 }
 
-.form__input:not(:placeholder-shown) + label {
+.form__input:not(:placeholder-shown) ~ label {
   top: 9px;
   font-size: 11px;
   line-height: 12px;
@@ -828,6 +831,9 @@ button,
   position: absolute;
   left: 19px;
   top: 16px;
+  -webkit-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  transition: 0.3s ease;
 }
 
 .form__agree {
@@ -842,6 +848,15 @@ button,
 .form__agree a {
   color: #6B6B6B;
   text-decoration: underline;
+}
+
+.form__invalid {
+  color: #FF5733;
+  font-size: 11px;
+  line-height: 12px;
+  font-weight: 400;
+  position: absolute;
+  bottom: -13px;
 }
 
 .payment__wrapper {

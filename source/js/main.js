@@ -1,1 +1,1 @@
-
+import './modules/form-validate';

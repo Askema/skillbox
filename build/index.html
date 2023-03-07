@@ -90,11 +90,11 @@
             </div>
             <h2 class="form__title title">Заполните контактные данные</h2>
             <div class="form__item">
-              <input class="form__input" type="text" name="name" id="name" placeholder=" " required>
+              <input class="form__input" type="text" name="name" id="name" placeholder=" " minlength="3" title="Слишком короткое имя" required>
               <label class="form__label" for="name">Имя</label>
             </div>
             <div class="form__item">
-              <input class="form__input" type="tel" name="tel" id="tel" placeholder=" " pattern="[+]d{1}s[(]d{3}[)]sd{3}[-]d{2}[-]d{2}" minlength="18" maxlength="18" required>
+              <input class="form__input form__input--tel" type="tel" name="tel" id="tel" placeholder=" " minlength="11" maxlength="18" required title="">
               <label class="form__label" for="tel">Телефон</label>
             </div>
             <div class="form__item">
