@@ -16,6 +16,7 @@ const webpackConfig = require('./webpack.config.js');
 const pug = require('gulp-pug');
 const cached = require('gulp-cached');
 const gcmq = require('gulp-group-css-media-queries');
+var ghPages = require('gulp-gh-pages');
 
 const pugToHtml = () => {
   return gulp.src('source/pug/pages/*.pug')
@@ -94,6 +95,11 @@ const createWebp = () => {
     .pipe(webp({quality: 90}))
     .pipe(gulp.dest(`source/img/${root}`));
 };
+
+gulp.task('deploy', function() {
+  return gulp.src('./build/**/*')
+    .pipe(ghPages());
+});
 
 const copy = () => {
   return gulp.src([
