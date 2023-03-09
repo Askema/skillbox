@@ -3,15 +3,25 @@
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   gap: 4px;
+  margin-top: 20px;
 
   @include vp-1024 {
     gap: 8px;
   }
 }
 
+.payment__title {
+  margin-top: 0;
+
+  @include vp-1024 {
+    margin-bottom: 32px;
+  }
+}
+
 .payment__label {
+  position: relative;
   @include text(12px, 16px);
-  outline: 1px solid $stroke-main;
+  border: 1px solid $stroke-main;
   padding: 12px;
   display: flex;
   flex-direction: column;
@@ -21,9 +31,18 @@
   border-radius: 12px;
   cursor: pointer;
 
+  @include vp-360 {
+    min-height: 84px;
+  }
+
   @include vp-1024 {
+    min-height: 104px;
     padding: 16px;
     @include text(14px, 20px);
+  }
+
+  & span {
+    margin: -1px;
   }
 }
 
@@ -33,16 +52,22 @@
 
   &:hover + .payment__label,
   &:focus + .payment__label {
-    outline-color: $accent-brand;
+    border-color: $accent-brand;
     transition: $trans-default;
   }
 
   &:checked + .payment__label {
-    outline: 2px solid $accent-brand;
+    border: 2px solid $accent-brand;
     transition: none;
+
+    & span {
+      margin: -2px;
+    }
   }
 }
 
 .payment__svg-wrapper {
   margin-top: auto;
+  position: absolute;
+  bottom: 7px;
 }

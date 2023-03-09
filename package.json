@@ -1,5 +1,6 @@
 {
   "private": true,
+  "homepage": "https://Askema.github.io/skillbox",
   "browserslist": [
     "last 3 versions",
     "IE 11",
@@ -12,6 +13,7 @@
     "build": "cross-env NODE_ENV=production gulp build",
     "start": "cross-env NODE_ENV=development gulp start",
     "imagemin": "gulp imagemin",
+    "deploy": "gulp build && gh-pages -d build",
     "webp": "gulp webp"
   },
   "editorconfig-cli": [
@@ -26,7 +28,6 @@
   "devDependencies": {
     "@babel/preset-env": "7.10.4",
     "@htmlacademy/editorconfig-cli": "1.x",
-    "@vimeo/player": "^2.17.1",
     "autoprefixer": "9.5.1",
     "babel-loader": "8.0.6",
     "browser-sync": "2.27.10",
@@ -40,6 +41,7 @@
     "gulp-cached": "1.1.1",
     "gulp-csso": "3.0.1",
     "gulp-gh-pages": "^0.5.4",
+    "gh-pages": "^1.2.0",
     "gulp-group-css-media-queries": "1.2.2",
     "gulp-imagemin": "7.1.0",
     "gulp-plumber": "1.2.1",
@@ -53,7 +55,6 @@
     "load-script2": "^2.0.6",
     "stylelint": "13.13.1",
     "webpack": "4.42.0",
-    "webpack-stream": "5.2.1",
-    "yt-player": "^3.5.0"
+    "webpack-stream": "5.2.1"
   }
 }

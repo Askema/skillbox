@@ -1,3 +1,11 @@
+.form__title {
+  margin: 40px 0 20px;
+
+  @include vp-1024 {
+    margin: 40px 0 32px;
+  }
+}
+
 .form__item {
   position: relative;
 
@@ -9,6 +17,7 @@
 .form__input {
   background-color: $bg-secondary;
   border: 1px solid $stroke-main;
+  border-radius: 10px;
   color: $text-main;
   padding: 18px;
   width: 100%;

@@ -18,7 +18,11 @@
   transition: opacity $trans-default, visibility $trans-default;
 
   @include vp-1024 {
-    width: 50%;
+    width: 49%;
+  }
+
+  @include vp-1280 {
+    width: 37%;
   }
 
   &:hover,
