@@ -578,7 +578,6 @@ button,
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  gap: 8px;
   position: relative;
 }
 
@@ -627,6 +626,7 @@ button,
   padding: 40px 20px;
   background-color: #FFFFFF;
   border-radius: 10px;
+  margin: 0 auto;
 }
 
 .booking__title {
@@ -634,6 +634,11 @@ button,
   line-height: 32px;
   font-weight: 600;
   margin-bottom: 16px;
+  margin-top: 0;
+}
+
+.booking__title.title {
+  margin-bottom: 20px;
 }
 
 .booking__description {
@@ -650,11 +655,16 @@ button,
   -ms-flex-pack: justify;
   justify-content: space-between;
   background-color: #F7F7F5;
-  border-radius: 20px;
+  border-radius: 12px;
   padding: 16px;
   font-size: 14px;
   line-height: 18px;
   font-weight: 500;
+}
+
+.booking__prices {
+  margin-top: 40px;
+  margin-bottom: 10px;
 }
 
 .booking__old-price {
@@ -681,6 +691,9 @@ button,
 
 .booking__count {
   margin: 0;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: normal;
 }
 
 .booking__discount {
@@ -744,6 +757,10 @@ button,
   color: #C3C2BE;
 }
 
+.form__title {
+  margin: 40px 0 20px;
+}
+
 .form__item {
   position: relative;
 }
@@ -755,6 +772,7 @@ button,
 .form__input {
   background-color: #F7F7F5;
   border: 1px solid #E4E4E4;
+  border-radius: 10px;
   color: #000000;
   padding: 18px;
   width: 100%;
@@ -867,13 +885,19 @@ button,
   -ms-grid-rows: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   gap: 4px;
+  margin-top: 20px;
+}
+
+.payment__title {
+  margin-top: 0;
 }
 
 .payment__label {
+  position: relative;
   font-size: 12px;
   line-height: 16px;
   font-weight: normal;
-  outline: 1px solid #E4E4E4;
+  border: 1px solid #E4E4E4;
   padding: 12px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -891,6 +915,10 @@ button,
   cursor: pointer;
 }
 
+.payment__label span {
+  margin: -1px;
+}
+
 .payment__input {
   position: fixed;
   opacity: 0;
@@ -898,27 +926,43 @@ button,
 
 .payment__input:hover + .payment__label,
 .payment__input:focus + .payment__label {
-  outline-color: #3D3BFF;
+  border-color: #3D3BFF;
   -webkit-transition: 0.3s ease;
   -o-transition: 0.3s ease;
   transition: 0.3s ease;
 }
 
 .payment__input:checked + .payment__label {
-  outline: 2px solid #3D3BFF;
+  border: 2px solid #3D3BFF;
   -webkit-transition: none;
   -o-transition: none;
   transition: none;
 }
 
+.payment__input:checked + .payment__label span {
+  margin: -2px;
+}
+
 .payment__svg-wrapper {
   margin-top: auto;
+  position: absolute;
+  bottom: 7px;
 }
 
 .title {
   font-size: 18px;
   line-height: 24px;
   font-weight: 500;
+}
+
+@media (min-width: 360px) {
+  .booking__prices {
+    margin-bottom: 0;
+  }
+
+  .payment__label {
+    min-height: 84px;
+  }
 }
 
 @media (min-width: 768px) {
@@ -928,6 +972,7 @@ button,
 
   .container {
     padding: 32px 120px;
+    border-radius: 20px;
   }
 
   .booking__description {
@@ -952,6 +997,8 @@ button,
   }
 
   .booking {
+    -ms-flex-negative: 1.04;
+    flex-shrink: 1.04;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -962,12 +1009,21 @@ button,
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
+    padding-right: 25px;
+    margin-right: 8px;
   }
 
   .booking__title {
     font-size: 32px;
     line-height: 40px;
     font-weight: 500;
+    letter-spacing: 0.2px;
+    margin-bottom: 25px;
+  }
+
+  .booking__title.title {
+    letter-spacing: -0.1px;
+    margin-bottom: 23px;
   }
 
   .booking__description {
@@ -977,15 +1033,45 @@ button,
     font-weight: normal;
   }
 
+  .booking__wrapper {
+    padding: 20px;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 500;
+  }
+
+  .booking__hire-purchase {
+    margin: 16px 0 6px;
+  }
+
+  .booking__price {
+    font-size: 32px;
+    line-height: 40px;
+    font-weight: 600;
+  }
+
+  .booking__month {
+    vertical-align: 14px;
+  }
+
   .btn {
-    width: 50%;
+    width: 49%;
+  }
+
+  .form__title {
+    margin: 40px 0 32px;
   }
 
   .payment__wrapper {
     gap: 8px;
   }
 
+  .payment__title {
+    margin-bottom: 32px;
+  }
+
   .payment__label {
+    min-height: 104px;
     padding: 16px;
     font-size: 14px;
     line-height: 20px;
@@ -1005,11 +1091,18 @@ button,
   }
 
   .container {
-    margin: 0 auto;
     max-width: 1280px;
+  }
+
+  .booking {
+    padding-right: 40px;
   }
 
   .booking__description {
     max-width: 408px;
+  }
+
+  .btn {
+    width: 37%;
   }
 }
