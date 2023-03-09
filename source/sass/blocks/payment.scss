@@ -30,6 +30,7 @@
   min-height: 100px;
   border-radius: 12px;
   cursor: pointer;
+  transition: $trans-default;
 
   @include vp-360 {
     min-height: 84px;
@@ -53,7 +54,6 @@
   &:hover + .payment__label,
   &:focus + .payment__label {
     border-color: $accent-brand;
-    transition: $trans-default;
   }
 
   &:checked + .payment__label {

@@ -15,7 +15,7 @@
   cursor: pointer;
   user-select: none;
 
-  transition: opacity $trans-default, visibility $trans-default;
+  transition: $trans-default;
 
   @include vp-1024 {
     width: 49%;
