@@ -1,17 +1,36 @@
 .booking {
   @include vp-1024 {
+    flex-shrink: 1.04;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    padding-right: 25px;
+    margin-right: 8px;
+  }
+
+  @include vp-1280 {
+    padding-right: 40px;
   }
 }
 
 .booking__title {
   @include text(24px, 32px, 600);
   margin-bottom: 16px;
+  margin-top: 0;
 
   @include vp-1024 {
     @include text(32px, 40px, 500);
+    letter-spacing: 0.2px;
+    margin-bottom: 25px;
+  }
+
+  &.title {
+    margin-bottom: 20px;
+
+    @include vp-1024 {
+      letter-spacing: -0.1px;
+      margin-bottom: 23px;
+    }
   }
 }
 
@@ -36,9 +55,27 @@
   display: flex;
   justify-content: space-between;
   background-color: $bg-secondary;
-  border-radius: 20px;
+  border-radius: 12px;
   padding: 16px;
   @include text(14px, 18px, 500);
+
+  @include vp-1024 {
+    padding: 20px;
+    @include text(16px, 20px, 500);
+  }
+}
+
+.booking__prices {
+  margin-top: 40px;
+  margin-bottom: 10px;
+
+  @include vp-360 {
+    margin-bottom: 0;
+  }
+
+  // @include vp-1024 {
+  //   margin-bottom: 18px;
+  // }
 }
 
 .booking__old-price {
@@ -52,18 +89,32 @@
 
 .booking__hire-purchase {
   margin: 12px 0 4px;
+
+  @include vp-1024 {
+    margin: 16px 0 6px;
+  }
 }
 
 .booking__price {
   @include text(24px, 32px, 600);
+
+  @include vp-1024 {
+    @include text(32px, 40px, 600);
+  }
+
 }
 
 .booking__month {
   vertical-align: 8px;
+
+  @include vp-1024 {
+    vertical-align: 14px;
+  }
 }
 
 .booking__count {
   margin: 0;
+  @include text(12px, 16px);
 }
 
 .booking__discount {
